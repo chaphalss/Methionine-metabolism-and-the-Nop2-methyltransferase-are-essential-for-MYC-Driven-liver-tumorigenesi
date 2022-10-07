@@ -1,3 +1,3 @@
-res <- read.table("D:\\Sensen\\Methionine\\Goga\\EC4 tumor metabolomics\\volcano\\Myc vs Ctrl\\2.txt", header=TRUE)
+res <- read.table("metabolomics MYC tumor vs normal liver.txt", header=TRUE)
 library(EnhancedVolcano)
 EnhancedVolcano(res, title = "MYC tumor vs normal liver", lab = as.character(res$ID), x ='Log2FoldChange', y = 'pvalue', pCutoff = 0.05, FCcutoff = 0.58, pointSize = 2.0, labSize = 5.0, selectLab = c('2-hydroxybutyrate', '5-methylthioadenosine', 'cysteine', 'hypotaurine', 'methionine', 'N-acetylmethionine', 'S-adenosylhomocysteine', 'S-adenosylmethionine', 'taurine'), xlim=c(-6,6), ylim=c(0,10), legendPosition = 'right', legendLabSize = 12, legendIconSize = 4.0, max.overlaps = 100, drawConnectors = TRUE, widthConnectors = 0.75, gridlines.major = FALSE, gridlines.minor = FALSE)
